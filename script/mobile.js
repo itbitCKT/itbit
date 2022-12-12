@@ -7,8 +7,10 @@ let nav = document.querySelector('.nav')
 let menuDiv=document.querySelector('.menu')
 let menuDivBack=document.querySelector('.menuBack')
 let body =  document.querySelector('.body')
+let block = document.querySelector(".blockLast")
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
     console.log('mob')
+    block.style.width="100%"
 }
 else{
     menuDiv.remove()
