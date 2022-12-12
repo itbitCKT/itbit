@@ -9,6 +9,8 @@ const eighth = document.getElementById('eighth')
 const info = document.querySelector(".info")
 let infoContent = document.querySelector(".infoContent")
 const hide = document.querySelector(".hide")
+let informationContent = document.querySelector(".informationContent")
+let information = document.querySelector(".information")
 const textContent = {
     textFirst:"Самое частое требование к кандидату на должность сисадмина. Оно и не удивительно. Ведь человек на самом деле должен серьёзно относиться к доверенной ему структуре и понимать все риски и сложности.",
     textSecond:"Дисциплины от своих работников ждёт любой работодатель, но тут она прям очень важна. Дисциплина для системного администратора — это и пунктуальность, и умение организовать своё время, и много чего ещё. Что уже говорить про экстренные ситуации, когда компании теряют огромные деньги из-за простоев?",
@@ -25,18 +27,26 @@ setTimeout(() => {
 }, 2000);
 function textIn (block,content){
     block.addEventListener('mouseover',()=>{
-             block.innerHTML=`${content}` 
-               info.style.opacity="1"  
+             informationContent.innerHTML=`${content}` 
+               informationContent.style.opacity="1"  
                infoContent.style.opacity="1"
+               information.style.transform="scale(1)"
         })
 
     }
     
 function textOut (block,nameOfBlock){
     block.addEventListener('mouseout',()=>{
-        info.style.opacity="0"  
+        informationContent.style.opacity="0"  
         block.innerHTML=nameOfBlock 
          infoContent.style.opacity="0" 
+         information.style.transform="scale(0)"
+         hide.style.width="100%"
+         hide.style.height="100%"
+        setTimeout(() => {
+            hide.style.width="0px"
+            hide.style.height="0px"
+        }, 400);
         })
     }
 
@@ -55,3 +65,4 @@ allFn(fiveth,textContent.textFiveth,'Увлеченность')
 allFn(sixth,textContent.textSixth,'Внимательность')
 allFn(seventh,textContent.textSeventh,'Исполнительность')
 allFn(eighth,textContent.textEighth,'Многозадачность')
+
