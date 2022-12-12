@@ -1,0 +1,160 @@
+*,*:before,*:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: auto;
+    font-family: 'Montserrat',sans-serif;
+    background: #F4F4F4;
+}
+.main{
+margin-top: 3%;
+margin-bottom: 1%;
+height: 100vh;
+}
+.title{
+text-align: center;
+width: auto;
+margin: 0 auto;
+}
+.titleText{
+font-weight: 600;
+font-size: 55px;
+line-height: 67px;
+margin-bottom: 3%;
+}
+.blockWrapper{
+width:80%;
+margin: 0 auto;
+}
+.block{
+width: 43%;
+height: auto;
+background: #FFFFFF;
+border-radius: 20px;
+margin-left: 2%;
+box-shadow: 10px 5px 5px  lightgray;
+}
+
+.block:nth-child(1){
+    margin-left: 0;
+}
+.blockImg{
+    width: 49px;
+    height: 49px;
+    margin:2% 3% 3% 2%;
+    display: inline-block;
+}
+.blockTitle{
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 46px;
+    color: #574EB3;
+    display: inline-block;
+    margin-top:2% ;
+}
+.blockContent{
+display: flex;
+padding-left: 3%;
+padding: 3%;
+font-weight: 500;
+font-size: 22px;
+line-height: 27px;
+}
+.wholeBlockTitle{
+    display: flex;
+}
+.blocks{
+    display: flex;
+    justify-content: center;
+    margin-bottom:2% ;
+}
+.blockTitleLast{
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 46px;
+    color: #574EB3;
+    display: inline-block;
+    margin-top:2% 
+}
+.blockLast{
+height: auto;
+background: #FFFFFF;
+border-radius: 20px;
+box-shadow: 10px 5px 5px lightgray;
+margin-bottom:1% ;
+/* width: 1000px; */
+}
+.blockContentLast{
+padding-left: 3%;
+padding: 1%;
+font-weight: 500;
+font-size: 22px;
+line-height: 27px;
+}
+@keyframes blockSwing { 
+  50% {     
+    transform: rotateZ(3deg);
+  } 
+  75%{
+    transform: rotateZ(-3deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+   }
+}
+.hoverStile{
+    animation: blockSwing 1s ease-in-out 1;
+}
+@media(max-width:700px){
+    .navLink{
+        margin-right: 1%;
+    }
+    .main{
+        margin: 0 auto;
+    }
+    .nav{
+        flex-direction: column;
+        position: absolute;
+        top:0;
+        background-color: white;
+        padding: 5%;
+        width: 100vw;
+        opacity: 0;
+        display: none;
+        transition:0.4s linear;
+    }
+    .navLink{
+        margin-bottom: 3%;
+        color: #130A2B;
+       
+    }
+    .header{
+        margin-top: 0;
+    }
+    .titleText{
+        font-size: 22px;
+        line-height: 22px;
+    }
+    .title{
+        text-align: center;
+        margin: auto;
+    }
+    .blocks{
+        flex-direction: column;
+    }
+    .block{
+        width: auto;
+        margin-bottom: 7%;
+    }
+    .blockTitle{
+        font-size: 28px;
+    }
+    .blockTitleLast{
+        font-size: 22px;
+    }
+    .blockLast{
+        width: 100%;
+    }
+}
